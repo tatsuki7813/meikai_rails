@@ -1,0 +1,11 @@
+version: "3"
+services:
+  myapp:
+    build: .
+    command: bin/rails server -b 0.0.0.0
+    volumes:
+      - ./src:/myapp
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
